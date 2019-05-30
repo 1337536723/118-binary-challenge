@@ -1,0 +1,15 @@
+service before-main
+{
+        disable = no
+        type = UNLISTED
+        wait = no
+        server = /home/before-main/run.sh
+        socket_type = stream
+        protocol = tcp
+        user = before-main
+        port = 1337
+        flags = REUSE
+        per_source = 10
+        rlimit_cpu = 3
+        nice = 18
+}

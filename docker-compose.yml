@@ -1,9 +1,19 @@
+before-main:
+  build: ./before-main
+  volumes:
+    - ./before-main/home:/home/before-main:ro
+    - ./before-main/xinetd:/etc/xinetd.d/xinetd:ro
+  ports:
+    - "10008:1337"
+  expose:
+    - "1337"
+
 bug-sort:
   build: ./bug-sort
   volumes:
     - ./bug-sort/home:/home/bug-sort:ro
     - ./bug-sort/xinetd:/etc/xinetd.d/xinetd:ro
   ports:
-    - "10008:1337"
+    - "10009:1337"
   expose:
     - "1337"
