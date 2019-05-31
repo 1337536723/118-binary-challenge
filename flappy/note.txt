@@ -1,0 +1,2 @@
+originate from https://github.com/skeeto/flappy
+modified by segno
