@@ -23,6 +23,7 @@ void fun()
   }
   printf("\n");
   puts("Thank you, please enter your name:");
+  memset(a, '\x00', 0x30);
   read(0, a, 0x30);
   return;
 }
